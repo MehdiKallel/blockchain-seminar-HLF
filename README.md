@@ -5,10 +5,6 @@ This guide provides instructions for deploying the CO2 Emission Chaincode in a H
 
 ## Prerequisites
 ## Deployment Script
-### Navigating to Test Network
-```bash
-
-
 
 ## Chaincode functionalities:
 
