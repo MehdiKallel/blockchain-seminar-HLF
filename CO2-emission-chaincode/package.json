@@ -1,0 +1,16 @@
+{
+  "name": "co2-emission-chaincode",
+  "version": "1.0.0",
+  "description": "Chaincode for CO2 Emission Tracking in Hyperledger Fabric",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fabric-contract-api": "^2.0.0",
+    "fabric-shim": "^2.0.0"
+  }
+}
+
