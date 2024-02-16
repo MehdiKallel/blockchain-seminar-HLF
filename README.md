@@ -42,11 +42,11 @@ bash test_deployment.sh
 
 The chaincode includes several functions (please extend the bash script to test the other functions other than registerProduct):
 
-initLedger: Initializes the ledger with predefined data.
-registerProduct: Registers a new product with its initial CO2 emission data.
-updateEmissionData: Updates the emission data for a product.
-verifyEmissions: Marks the product's emissions as verified and records the audit report.
-issueCO2Certificate: Issues a CO2 certificate for a product.
-queryProduct: Retrieves details of a product.
-consumerFeedback: Records consumer feedback for a product.
+- initLedger: Initializes the ledger with predefined data.
+- registerProduct: Registers a new product with its initial CO2 emission data.
+- updateEmissionData: Updates the emission data for a product.
+- verifyEmissions: Marks the product's emissions as verified and records the audit report.
+- issueCO2Certificate: Issues a CO2 certificate for a product.
+- queryProduct: Retrieves details of a product.
+- consumerFeedback: Records consumer feedback for a product.
 
