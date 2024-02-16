@@ -10,7 +10,7 @@ if [ -z "$1" ]; then
 fi
 
 CHAINCODE_DIR=$1
-CHAINCODE_NAME=$(basename "$CHAINCODE_DIR")
+CHAINCODE_NAME="co2_emission"
 
 # Color codes
 RED='\033[0;31m'

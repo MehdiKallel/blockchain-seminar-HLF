@@ -1,19 +1,52 @@
-# CO2 Emission use case
+# CO2 Emission Tracking System on Hyperledger Fabric
 
-## Overview
-This guide provides instructions for deploying the CO2 Emission Chaincode in a Hyperledger Fabric network. It also offers an overview of the chaincode functionalities and the roles of different organizations involved in the process.
+This project implements a CO2 emission tracking system using Hyperledger Fabric. It allows organizations to register products, update and verify emission data, issue CO2 certificates, and collect consumer feedback on the blockchain, ensuring data integrity and transparency.
 
 ## Prerequisites
-## Deployment Script
 
-## Chaincode functionalities:
+Before you begin, ensure you have the following installed:
+- Hyperledger Fabric and its prerequisites
+- Node.js and npm (for the chaincode written in JavaScript)
+- Docker and Docker Compose
+
+## Getting Started
+
+To get the network up and running, and to deploy the chaincode, follow the steps below.
+
+### 1. Start the Network
+
+The `prepare_network.sh` script brings up the Fabric network, creates a channel, and joins the peers to the channel. Run the following command in your terminal:
+
+```bash
+bash prepare_network.sh
+```
 
 
-The CO2 Emission Chaincode tracks and manages CO2 emissions data for products. It includes the following key functions:
+This script performs the following actions:
 
-- registerProduct: Registers a new product with initial emission data.
-- updateEmissionData: Updates emission data for a registered product.
-- verifyEmissions: Marks the emissions of a product as verified, along with an audit report.
-- issueCO2Certificate: Issues a CO2 certificate for a product with verified emissions.
-- queryProduct: Queries the current state of a product.
-- consumerFeedback: Records consumer feedback for a product.
+- Navigates to the test network directory.
+- Brings down any previously set up network.
+- Starts the network and creates a channel.
+- Sets environment variables for Org1 and Org2.
+- Packages, installs, and approves the chaincode.
+- Commits the chaincode to the channel.
+
+
+### 2. Test Chaincode Deployment
+
+After deploying the chaincode, use the test_deployment.sh script to test the chaincode functions. This script registers a product and performs various operations to demonstrate the chaincode's capabilities. Run:
+
+```bash
+bash test_deployment.sh
+```
+
+The chaincode includes several functions (please extend the bash script to test the other functions other than registerProduct):
+
+initLedger: Initializes the ledger with predefined data.
+registerProduct: Registers a new product with its initial CO2 emission data.
+updateEmissionData: Updates the emission data for a product.
+verifyEmissions: Marks the product's emissions as verified and records the audit report.
+issueCO2Certificate: Issues a CO2 certificate for a product.
+queryProduct: Retrieves details of a product.
+consumerFeedback: Records consumer feedback for a product.
+
