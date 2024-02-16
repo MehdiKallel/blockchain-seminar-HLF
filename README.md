@@ -15,10 +15,10 @@ To get the network up and running, and to deploy the chaincode, follow the steps
 
 ### 1. Start the Network
 
-The `prepare_network.sh` script brings up the Fabric network, creates a channel, and joins the peers to the channel. Run the following command in your terminal:
+The `prepare_network_updated.sh` script brings up the Fabric network, creates a channel, and joins the peers to the channel. Run the following command in your terminal:
 
 ```bash
-bash prepare_network.sh
+bash prepare_network_updated.sh
 ```
 
 
